@@ -12,7 +12,7 @@ import os
 class Config:
     data_dir = "data/HuSHeM"  # 替换为实际路径
     train_dir = os.path.join(data_dir, "train")
-    test_dir = os.path.join(data_dir, "test")
+    val_dir = os.path.join(data_dir, "val")
     csv_path = "res.csv"
     num_classes = 4
     batch_size = 16
@@ -26,10 +26,10 @@ class Config:
 def main():
     # 数据加载与清洗
     clean_hidden_files(Config.train_dir)
-    clean_hidden_files(Config.test_dir)
+    clean_hidden_files(Config.val_dir)
 
     train_dataset = ImageDataset(Config.train_dir, train_transform)
-    test_dataset = ImageDataset(Config.test_dir, test_transform)
+    test_dataset = ImageDataset(Config.val_dir, test_transform)
 
     train_loader = DataLoader(
         train_dataset, batch_size=Config.batch_size, shuffle=True, num_workers=4, persistent_workers=True

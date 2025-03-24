@@ -1,0 +1,17 @@
+# 基础环境
+torch>=1.8.0
+torchvision>=0.9.0
+numpy>=1.21.0
+
+# 图像处理组件
+opencv-python-headless>=4.5.4  # 如果使用OpenCV操作
+Pillow>=9.0.0                 # 图像读写
+scikit-image>=0.19.0          # 高级图像处理
+
+# 训练辅助组件
+tqdm>=4.62.0                  # 进度条
+tensorboard>=2.6.0            # 训练可视化
+matplotlib>=3.5.0             # 结果绘图
+
+# 可选加速组件
+cudatoolkit=11.3              # 根据CUDA版本选择
