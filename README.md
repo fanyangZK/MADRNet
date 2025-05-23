@@ -8,9 +8,9 @@ Sperm morphology analysis has important scientific research value in the clinica
 
 ```
 root/
-├── data #存放数据
+├── data # datasets
 │   └── HuSHem # Human Sperm Head Morphology datasets
-├── model # MADRNET 配置文件
+├── model # MADRNET config file
 │   ├── MADRNet.py
 │   ├── DualAttention.py
 │   └── ReversibleBlock.py
@@ -34,7 +34,6 @@ root/
 
 ```
 python main.py
-
 ```
 
 ## Notes
@@ -42,6 +41,11 @@ python main.py
 ```
 pip install -r requirements.txt
 ```
+
+You might want to pin specific versions if you need exact reproducibility. For production use, consider using:
+torch==2.0.1+cu118 (with CUDA version)
+torchvision==0.15.2+cu118
+etc., depending on your system configuration.
 ### 2.Runtime Environment
 Requires Python 3.9+, CUDA 11.8, and PyTorch 2.0+
 ### 3.Configuration Parameters
